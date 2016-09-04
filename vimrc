@@ -24,6 +24,7 @@ colorscheme onedark
 filetype plugin indent on
 syntax on
 set number
+set hlsearch
 
 map <C-\> :NERDTreeToggle<CR>
 
