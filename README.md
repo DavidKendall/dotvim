@@ -1,8 +1,3 @@
----
-layout: default
-title: MyTest
----
-
 # dotvim
 My `.vim` directory - managed by `pathogen`, uses `git submodules` For more
 details about this approach see [this
