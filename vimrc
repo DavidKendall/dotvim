@@ -25,10 +25,19 @@ filetype plugin indent on
 syntax on
 set number
 set hlsearch
+set spelllang=en_gb
 
-map <C-\> :NERDTreeToggle<CR>
+nnoremap <silent> <leader>sp :setlocal spell!<CR>
+nnoremap <silent> <C-\> :NERDTreeToggle<CR>
+"nnoremap <Leader>jb : %!js-beautify -j -q -B -f -<CR>
+nnoremap <Leader>jb : %!jscs -x - -<CR>
+nnoremap ]l : lnext<CR>
+nnoremap [l : lprevious<CR>
+
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-let g:markdown_fenced_languages = ['c', 'html', 'python', 'bash=sh']
-
-
+let g:markdown_fenced_languages = ['c', 'html', 'python', 'sh', 'bash=sh']
+let g:syntastic_auto_loc_list=1
+let g:syntastic_loc_list_height=5
+let g:syntastic_javascript_checkers = ['jscs']
+let g:syntastic_javascript_eslint_exec = '/usr/bin/eslint'
