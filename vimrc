@@ -24,6 +24,7 @@ colorscheme onedark
 filetype plugin indent on
 syntax on
 set number
+set colorcolumn=80
 set hlsearch
 set spelllang=en_gb
 
