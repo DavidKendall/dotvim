@@ -1,3 +1,4 @@
+let g:pathogen_blacklist = ['vim-airline']
 execute pathogen#infect()
 execute pathogen#helptags()
 
@@ -42,3 +43,6 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_loc_list_height=5
 let g:syntastic_javascript_checkers = ['jscs']
 let g:syntastic_javascript_eslint_exec = '/usr/bin/eslint'
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
